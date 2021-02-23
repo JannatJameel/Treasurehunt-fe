@@ -1,0 +1,2 @@
+// AUTH ACTION TYPES
+export const SET_USER = "SET_USER";
