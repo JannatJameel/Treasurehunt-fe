@@ -11,6 +11,9 @@ const Signin = () => {
     password: "",
   });
 
+  const [passwordVis, setPasswordVis] = useState(false);
+  const togglePasswordVisiblity = () => setPasswordVis(passwordVis ? false : true);
+
   const handleChange = (event) =>
     setUser({ ...user, [event.target.name]: event.target.value });
 
@@ -38,11 +41,12 @@ const Signin = () => {
           <input
             name="password"
             value={user.password}
-            type="password"
+            type={passwordVis? "text" : "password"}
             className="form-control"
             onChange={handleChange}
           />
         </div>
+        <button onClick={togglePasswordVisiblity}>eye</button>
         <button className="btn float-right" type="submit">
           Sign in
         </button>

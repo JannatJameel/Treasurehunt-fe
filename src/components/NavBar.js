@@ -12,17 +12,15 @@ const NavBar = ({ currentTheme, toggleTheme }) => {
   return (
     <nav className="navbar navbar-expand">
       <Logo className="navbar-brand" to="/">
-        <h1>Treasure Hunt</h1>
+        <h3>Treasure Hunt</h3>
       </Logo>
       <div className="navbar-nav ml-auto">
         {user ? (
           <>
             <p>Hala Wallah, {user.username}!</p>
-            <FiLogOut
-              onClick={() => dispatch(signout())}
-              size="2em"
-              color="red"
-            />
+            <Link to="/">
+              <AuthButtonStyled onClick={() => dispatch(signout())}>Sign out</AuthButtonStyled>
+            </Link>
           </>
         ) : (
           <>

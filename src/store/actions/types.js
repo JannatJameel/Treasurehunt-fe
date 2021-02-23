@@ -1,2 +1,7 @@
 // AUTH ACTION TYPES
 export const SET_USER = "SET_USER";
+
+// THINGS TYPES
+export const FETCH_RANDOM = "FETCH_RANDOM";
+export const FETCH_TREASURES = "FETCH_TREASURES";
+
